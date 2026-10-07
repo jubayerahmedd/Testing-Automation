@@ -1,0 +1,26 @@
+{
+  "name": "jubayer-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --grep-invert @write",
+    "test:write": "playwright test --project=chromium --grep @write --workers=1",
+    "test:events": "playwright test tests/events --project=chromium --workers=1",
+    "smoke": "playwright test --grep @smoke",
+    "ui": "playwright test --ui",
+    "headed": "playwright test --headed",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4",
+    "dotenv": "^18.0.5",
+    "typescript": "^7.0.2"
+  }
+}
